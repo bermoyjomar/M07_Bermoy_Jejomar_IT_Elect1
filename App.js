@@ -1,9 +1,7 @@
 import React from 'react';
 import { SafeAreaView } from 'react-native';
-//import ColorChangerApp from './ColorChangerApp';
-//import CounterApp from './CounterApp';
-import ChatScreen from "./ChatScreen";
 import CommentSection from "./CommentSection"
+import ChatScreen from "./ChatScreen";
 
 export default function App() {
   return (
