@@ -1,15 +1,23 @@
 import React from 'react';
-import { SafeAreaView } from 'react-native';
-//import ColorChangerApp from './ColorChangerApp';
-//import CounterApp from './CounterApp';
 import ChatScreen from "./ChatScreen";
 import CommentSection from "./CommentSection"
+import { 
+  KeyboardAvoidingView,
+  Platform,
+  Image
+} from "react-native";
 
 export default function App() {
   return (
-    <SafeAreaView style={{ flex: 1 }}>
+    <KeyboardAvoidingView 
+      style={{ flex: 1 }}
+      behavior={Platform.OS === "ios" ? "padding" : "height" }>
+      <Image
+        source={require ('./assets/Pic.jpeg')} 
+        style={{width:380, height:200}}
+      />
       <CommentSection />
       <ChatScreen />
-    </SafeAreaView>
+    </KeyboardAvoidingView>
   );
 }
